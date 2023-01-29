@@ -1,0 +1,15 @@
+﻿@model List<Category>
+
+<br />
+<br />
+<div class="list-group">
+    <a href="/products" class="list-group-item list-group-item-action"> <strong> Tüm Kategoriler </strong></a>
+    @foreach (var category in Model)
+    {
+            <a asp-action="list" asp-controller="shop" asp-route-category="@category.Url" class="list-group-item list-group-item-action"> @category.Name </a>
+    }
+</div>
+<partial name="_search" />
+
+
+

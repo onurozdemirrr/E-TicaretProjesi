@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\arcelik_buzdolabi.png" />
+    <None Include="wwwroot\images\asus.jpg" />
+    <None Include="wwwroot\images\gomlek.png" />
+    <None Include="wwwroot\images\iphone11.jpg" />
+    <None Include="wwwroot\images\iphone14.jpg" />
+    <None Include="wwwroot\images\iphone6.jpeg" />
+    <None Include="wwwroot\images\Lgtv.jpg" />
+    <None Include="wwwroot\images\samsungS6.jpg" />
+    <None Include="wwwroot\images\samsungS7.jpg" />
+    <None Include="wwwroot\images\toshiba.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Iyzipay" Version="2.1.55" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.12" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ETicaret.DataAccessLayer\ETicaret.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\ETicaret.Entities\ETicaret.Entities.csproj" />
+    <ProjectReference Include="..\ETicaret.BusinessLayer\ETicaret.BusinessLayer.csproj" />
+  </ItemGroup>
+
+</Project>

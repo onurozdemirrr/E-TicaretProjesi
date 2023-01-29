@@ -1,0 +1,57 @@
+﻿@model ProductListViewModel
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Ürünler</h1>
+        <hr />
+        <a href="/admin/products/create" class="btn btn-primary btn-sm"> Ürün Ekle</a>
+        <br /> <br />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td style="width:30px"> Id </td>
+                    <td style="width:100px"> Fotoğraf </td>
+                    <td> Ürün Adı </td>
+                    <td style="width:50px"> Fiyat </td>
+                    <td style="width:30px"> Anasayfa </td>
+                    <td style="width:30px"> OnaylıMı </td>
+                    <td style="width:150px">  </td>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Products.Count() > 0)
+                {
+                    foreach (var product in Model.Products)
+                    {
+                        <tr>
+                            <td> @product.Id </td>
+                            <td>
+                                <img src="~/images/@product.ImageUrl" width="80px" alt="" />
+                            </td>
+                            <td> @product.Name </td>
+                            <td> @product.Price </td>
+                            <td> @product.IsHome </td>
+                            <td> @product.IsApproved </td>
+                            <td>
+                                <a href="/admin/products/@product.Id" class="btn btn-primary btn-sm mr-2"> Güncelle</a>
+                                <form action="/admin/deleteproduct" method="post" style="display:inline">
+                                    <input type="hidden" name="Id" value="@product.Id" />
+                                    <button type="submit" class="btn btn-danger btn-sm"> Sil</button>
+
+                                </form>
+                            </td>
+                        </tr>
+                    }
+
+                }
+                else
+                {
+                    <div class="alert alert-warning">
+                        <h3>Listelenecek ürün bulunamadı.</h3>
+                    </div>
+                }
+            </tbody>
+        </table>
+    </div>
+    
+</div>

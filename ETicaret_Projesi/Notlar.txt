@@ -1,0 +1,22 @@
+1 - Asp.Net Core Web projesi oluþturldu.  .Net6 seçildi.
+2 - Katmanlar oluþturuldu.
+3 - Entityler oluþturuldu.
+4 - Web tarafýnda taslak hazýrlandý.
+5 - DAL katmanýnýn yapýsý oluþturuldu.
+	- Context sýnýfýmýzý oluþturacaðýz
+		- Entity Framework Core 6.0.12 
+		- Entity Framework Core Tools 6.0.12 
+		- Entity Framework Core Design 6.0.12 
+		- Entity Framework Core SqlServer 6.0.12 
+		  Nuget'ten yüklenecek.
+
+	- WebUI projesine de aþaðýdaki paketleri ekliyorum.
+		- - Entity Framework Core Design 6.0.12 
+
+	- 2 Klasör oluþturulacak
+		- Abstract : Soyut nesneleri barýndýrmak için. interfaceler için.
+		- Concrete : Somut sýnýflarýmýz için
+			- EfCore isminde bir klasör oluþturuyorum. Entity Framework ile ilgili kodlarý burada barýndýracaðým.
+			- AdoNet isminde ikinci klasörü oluþturuyorum. AdoNet ile ilgili kodlarý barýndýracaðým.
+	
+			
